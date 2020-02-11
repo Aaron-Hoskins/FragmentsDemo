@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1356DD"
+    tools:context=".BlueFragment">
+
+    <EditText
+        android:id="@+id/etBlueInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:hint="Enter Text For Blue"/>
+
+    <TextView
+        android:id="@+id/tvBlueDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnSendBlueData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send Data"/>
+
+</LinearLayout>
