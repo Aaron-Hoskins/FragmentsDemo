@@ -52,6 +52,7 @@ class GreenFragment : Fragment() {
     override fun onDetach() {
         super.onDetach()
         listener = null
+        //context = this
     }
 
     interface OnFragmentInteractionListener {

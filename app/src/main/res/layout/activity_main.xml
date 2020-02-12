@@ -27,7 +27,33 @@
         android:layout_height="0dp"
         android:layout_weight="1"/>
 
+    <Button
+        android:id="@+id/btnPopOneFromStack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pop one from Stack"
+        android:onClick="onClick"/>
 
+    <Button
+        android:id="@+id/btnPopUptoTag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pop All upto TAG"
+        android:onClick="onClick"/>
+
+    <Button
+        android:id="@+id/btnAddFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Fragment"
+        android:onClick="onClick"/>
+
+    <Button
+        android:id="@+id/btnRemoveInstance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Remove Instance"
+        android:onClick="onClick"/>
 
 
 

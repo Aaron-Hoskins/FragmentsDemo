@@ -28,6 +28,12 @@ class RedFragment() : Fragment(), View.OnClickListener {
         listener = passedListener
     }
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        retainInstance = true
+        //setRetainInstance(true);
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         view.btnSendRedData.setOnClickListener(this)

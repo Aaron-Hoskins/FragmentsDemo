@@ -3,7 +3,9 @@ package com.examples.coding.fragmentsdemo
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
+import androidx.fragment.app.FragmentManager
 
 class MainActivity : AppCompatActivity(), OnFragmentInteractionListener,
     BlueFragment.OnFragmentInteractionListener,
@@ -50,6 +52,29 @@ class MainActivity : AppCompatActivity(), OnFragmentInteractionListener,
     }
 
     override fun onFragmentInteraction() {
+    }
+
+    fun onClick(view: View) {
+        when(view.id) {
+            R.id.btnPopOneFromStack -> {supportFragmentManager.popBackStack()}
+            R.id.btnPopUptoTag -> {
+                supportFragmentManager.popBackStack("BLUE_FRAG", FragmentManager.POP_BACK_STACK_INCLUSIVE)}
+            R.id.btnAddFragment -> {
+                val newFragment = BlueFragment()
+                supportFragmentManager
+                    .beginTransaction()
+                    .replace(R.id.frmFragmentDisplayOne, newFragment)
+                    .addToBackStack("BLUE_FRAG")
+                    .commit()
+            }
+            R.id.btnRemoveInstance ->{
+                supportFragmentManager
+                    .beginTransaction()
+                    .remove(blueFragment)
+                    .commit()
+            }
+        }
+
     }
 
 
